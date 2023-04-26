@@ -22,5 +22,7 @@ with open ("integer.txt", "r") as integer_file, open("double.txt", "a") as doubl
             # append to double.txt, ^2 means the number raised to 2
             double_file.write("\t" + str(num_in_int) + "^2 = " + str(double_num) + "\n")
         #if odd
+        if num_in_int % 2 != 0:
             # get the cube of the integer
+            triple_num = num_in_int ** 3
             # append to triple.txt
