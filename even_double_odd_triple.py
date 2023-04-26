@@ -7,6 +7,9 @@
 
 # open integer.txt, open double.txt, open triple.txt
 with open ("integer.txt", "r") as integer_file, open("double.txt", "a") as double_file, open("triple.txt", "a") as triple_file: 
+    #append this text in double.txt 
+    double_file.write("Squaring Even Numbers:\n")
+
     #for each line in nembers.txt
     for line in integer_file:
         #convert each number in the line into integers
@@ -14,9 +17,10 @@ with open ("integer.txt", "r") as integer_file, open("double.txt", "a") as doubl
         #check each integers
         #if even
         if num_in_int % 2 == 0:
-            print(str(num_in_int))
             # get the square of the integer
-            # append to double.txt
+            double_num = num_in_int ** 2
+            # append to double.txt, ^2 means the number raised to 2
+            double_file.write("\t" + str(num_in_int) + "^2 = " + str(double_num) + "\n")
         #if odd
             # get the cube of the integer
             # append to triple.txt
