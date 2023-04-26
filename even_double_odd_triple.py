@@ -13,6 +13,8 @@ with open ("integer.txt", "r") as integer_file, open("double.txt", "a") as doubl
         num_in_int = int(line)
         #check each integers
         #if even
+        if num_in_int % 2 == 0:
+            print(str(num_in_int))
             # get the square of the integer
             # append to double.txt
         #if odd
