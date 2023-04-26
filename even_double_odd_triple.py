@@ -7,8 +7,10 @@
 
 # open integer.txt, open double.txt, open triple.txt
 with open ("integer.txt", "r") as integer_file, open("double.txt", "a") as double_file, open("triple.txt", "a") as triple_file: 
-    #append this text in double.txt 
+    #append this text in double.txt: 
     double_file.write("Squaring Even Numbers:\n")
+    #append this text in triple.txt:
+    triple_file.write("Getting the cube of these odd numbers:\n")
 
     #for each line in nembers.txt
     for line in integer_file:
@@ -26,3 +28,4 @@ with open ("integer.txt", "r") as integer_file, open("double.txt", "a") as doubl
             # get the cube of the integer
             triple_num = num_in_int ** 3
             # append to triple.txt
+            triple_file.write("\t\t" + str(num_in_int) + "^3 = " + str(triple_num) + "\n")
