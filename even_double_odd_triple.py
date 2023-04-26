@@ -9,8 +9,8 @@
 with open ("integer.txt", "r") as integer_file, open("double.txt", "a") as double_file, open("triple.txt", "a") as triple_file: 
     #for each line in nembers.txt
     for line in integer_file:
-        print(line.strip())
         #convert each number in the line into integers
+        num_in_int = int(line)
         #check each integers
         #if even
             # get the square of the integer
