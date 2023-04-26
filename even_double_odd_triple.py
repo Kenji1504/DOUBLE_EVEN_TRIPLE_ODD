@@ -29,3 +29,14 @@ with open ("integer.txt", "r") as integer_file, open("double.txt", "a") as doubl
             triple_num = num_in_int ** 3
             # append to triple.txt
             triple_file.write("\t\t" + str(num_in_int) + "^3 = " + str(triple_num) + "\n")
+
+#add visualizations for the program
+for i in range(3):
+    from time import sleep
+    print(".\n")
+    sleep(1)
+
+import pyfiglet
+PROMPT_MESSAGE = "Please take a look at the double.txt and triple.txt files for the information."
+print("\033[96m" + pyfiglet.figlet_format(PROMPT_MESSAGE, font = "smslant"))
+
